@@ -29,6 +29,9 @@ public class Posting {
     @Column
     private String description;
 
+    @Column
+    private String image_uri;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
