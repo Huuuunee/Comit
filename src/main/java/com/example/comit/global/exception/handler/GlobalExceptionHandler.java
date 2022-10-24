@@ -1,6 +1,9 @@
 package com.example.comit.global.exception.handler;
 
+import com.example.comit.domain.auth.exception.UserAlreadyExistException;
 import com.example.comit.global.exception.ErrorResponse;
+import com.example.comit.global.exception.exceptionCollection.TokenExpirationException;
+import com.example.comit.global.exception.exceptionCollection.TokenNotValidException;
 import com.example.comit.global.exception.exceptionCollection.UnknownException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.Ordered;
@@ -19,6 +22,27 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(UnknownException.class)
     public ResponseEntity<ErrorResponse> handleUnknownException(HttpServletRequest request, UnknownException ex){
+        printError(request, ex, ex.getErrorCode().getMessage());
+        ErrorResponse errorResponse = new ErrorResponse(ex.getErrorCode().getMessage(), ex.getErrorCode().getStatus());
+        return new ResponseEntity<>(errorResponse, HttpStatus.valueOf(ex.getErrorCode().getStatus()));
+    }
+
+    @ExceptionHandler(TokenExpirationException.class)
+    public ResponseEntity<ErrorResponse> handleUnknownException(HttpServletRequest request, TokenExpirationException ex){
+        printError(request, ex, ex.getErrorCode().getMessage());
+        ErrorResponse errorResponse = new ErrorResponse(ex.getErrorCode().getMessage(), ex.getErrorCode().getStatus());
+        return new ResponseEntity<>(errorResponse, HttpStatus.valueOf(ex.getErrorCode().getStatus()));
+    }
+
+    @ExceptionHandler(TokenNotValidException.class)
+    public ResponseEntity<ErrorResponse> handleUnknownException(HttpServletRequest request, TokenNotValidException ex){
+        printError(request, ex, ex.getErrorCode().getMessage());
+        ErrorResponse errorResponse = new ErrorResponse(ex.getErrorCode().getMessage(), ex.getErrorCode().getStatus());
+        return new ResponseEntity<>(errorResponse, HttpStatus.valueOf(ex.getErrorCode().getStatus()));
+    }
+
+    @ExceptionHandler(UserAlreadyExistException.class)
+    public ResponseEntity<ErrorResponse> handleUnknownException(HttpServletRequest request, UserAlreadyExistException ex){
         printError(request, ex, ex.getErrorCode().getMessage());
         ErrorResponse errorResponse = new ErrorResponse(ex.getErrorCode().getMessage(), ex.getErrorCode().getStatus());
         return new ResponseEntity<>(errorResponse, HttpStatus.valueOf(ex.getErrorCode().getStatus()));

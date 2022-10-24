@@ -6,10 +6,10 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Getter
-public class TokenNotValidException extends RuntimeException {
+public class TokenExpirationException extends RuntimeException {
     private final ErrorCode errorCode;
-    public TokenNotValidException(String message) {
+    public TokenExpirationException(String message) {
         super(message);
-        errorCode = ErrorCode.TOKEN_NOT_VALID;
+        errorCode = ErrorCode.TOKEN_EXPIRATION;
     }
 }
