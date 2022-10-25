@@ -10,7 +10,7 @@ import javax.validation.constraints.Pattern;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserSignUpRequest {
+public class SignUpRequest {
 
     @NotBlank
     private String email;

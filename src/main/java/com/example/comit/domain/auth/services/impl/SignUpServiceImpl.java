@@ -1,7 +1,7 @@
 package com.example.comit.domain.auth.services.impl;
 
 import com.example.comit.domain.auth.exception.UserAlreadyExistException;
-import com.example.comit.domain.auth.presentation.dto.request.UserSignUpRequest;
+import com.example.comit.domain.auth.presentation.dto.request.SignUpRequest;
 import com.example.comit.domain.auth.services.SignUpService;
 import com.example.comit.domain.user.domain.entity.User;
 import com.example.comit.domain.user.repository.UserRepository;
@@ -18,7 +18,7 @@ public class SignUpServiceImpl implements SignUpService {
     private final PasswordEncoder passwordEncoder;
 
     @Transactional(rollbackFor = Exception.class)
-    public void execute(UserSignUpRequest userSignUpRequest){
+    public void execute(SignUpRequest userSignUpRequest){
         //이메일로 유저 검색후 있으면 에러처리
         if(userRepository.findByEmail(userSignUpRequest.getEmail()).isPresent()){
             throw new UserAlreadyExistException("이미 존재하는 이메일입니다");

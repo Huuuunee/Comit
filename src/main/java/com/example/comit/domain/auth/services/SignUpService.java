@@ -1,8 +1,7 @@
 package com.example.comit.domain.auth.services;
 
-import com.example.comit.domain.auth.presentation.dto.request.UserSignUpRequest;
-import org.springframework.http.ResponseEntity;
+import com.example.comit.domain.auth.presentation.dto.request.SignUpRequest;
 
 public interface SignUpService {
-    void execute(UserSignUpRequest userSignUpRequest);
+    void execute(SignUpRequest userSignUpRequest);
 }
