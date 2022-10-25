@@ -1,6 +1,8 @@
 package com.example.comit.global.exception.handler;
 
+import com.example.comit.domain.auth.exception.PasswordWrongException;
 import com.example.comit.domain.auth.exception.UserAlreadyExistException;
+import com.example.comit.domain.auth.exception.UserNotFoundException;
 import com.example.comit.global.exception.ErrorResponse;
 import com.example.comit.global.exception.exceptionCollection.TokenExpirationException;
 import com.example.comit.global.exception.exceptionCollection.TokenNotValidException;
@@ -43,6 +45,20 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(UserAlreadyExistException.class)
     public ResponseEntity<ErrorResponse> handleUnknownException(HttpServletRequest request, UserAlreadyExistException ex){
+        printError(request, ex, ex.getErrorCode().getMessage());
+        ErrorResponse errorResponse = new ErrorResponse(ex.getErrorCode().getMessage(), ex.getErrorCode().getStatus());
+        return new ResponseEntity<>(errorResponse, HttpStatus.valueOf(ex.getErrorCode().getStatus()));
+    }
+
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleUnknownException(HttpServletRequest request, UserNotFoundException ex){
+        printError(request, ex, ex.getErrorCode().getMessage());
+        ErrorResponse errorResponse = new ErrorResponse(ex.getErrorCode().getMessage(), ex.getErrorCode().getStatus());
+        return new ResponseEntity<>(errorResponse, HttpStatus.valueOf(ex.getErrorCode().getStatus()));
+    }
+
+    @ExceptionHandler(PasswordWrongException.class)
+    public ResponseEntity<ErrorResponse> handleUnknownException(HttpServletRequest request, PasswordWrongException ex){
         printError(request, ex, ex.getErrorCode().getMessage());
         ErrorResponse errorResponse = new ErrorResponse(ex.getErrorCode().getMessage(), ex.getErrorCode().getStatus());
         return new ResponseEntity<>(errorResponse, HttpStatus.valueOf(ex.getErrorCode().getStatus()));
