@@ -40,4 +40,7 @@ public class User {
     @Builder.Default
     private List<Posting> posting = new ArrayList<>();
 
+    public void exchangeRefreshToken(String refreshToken){
+        this.refreshToken = refreshToken;
+    }
 }
