@@ -1,4 +1,4 @@
-package com.example.comit.global.security;
+package com.example.comit.global.security.config;
 
 import com.example.comit.global.filter.JwtRequestFilter;
 import com.example.comit.global.security.handler.CustomAccessDeniedHandler;

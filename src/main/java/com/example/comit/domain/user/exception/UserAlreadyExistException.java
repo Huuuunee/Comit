@@ -1,6 +1,6 @@
-package com.example.comit.domain.auth.exception;
+package com.example.comit.domain.user.exception;
 
-import com.example.comit.global.exception.ErrorCode;
+import com.example.comit.global.error.ErrorCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 

@@ -1,7 +1,7 @@
 package com.example.comit.global.security.jwt;
 
-import com.example.comit.global.exception.exceptionCollection.TokenExpirationException;
-import com.example.comit.global.exception.exceptionCollection.TokenNotValidException;
+import com.example.comit.global.error.exception.TokenExpirationException;
+import com.example.comit.global.error.exception.TokenNotValidException;
 import com.example.comit.global.security.auth.AuthDetailsService;
 import com.example.comit.global.security.jwt.properties.JwtProperties;
 import io.jsonwebtoken.*;

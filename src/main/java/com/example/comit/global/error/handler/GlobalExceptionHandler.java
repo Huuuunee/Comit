@@ -1,12 +1,12 @@
-package com.example.comit.global.exception.handler;
+package com.example.comit.global.error.handler;
 
-import com.example.comit.domain.auth.exception.PasswordWrongException;
-import com.example.comit.domain.auth.exception.UserAlreadyExistException;
-import com.example.comit.domain.auth.exception.UserNotFoundException;
-import com.example.comit.global.exception.ErrorResponse;
-import com.example.comit.global.exception.exceptionCollection.TokenExpirationException;
-import com.example.comit.global.exception.exceptionCollection.TokenNotValidException;
-import com.example.comit.global.exception.exceptionCollection.UnknownException;
+import com.example.comit.domain.user.exception.PasswordWrongException;
+import com.example.comit.domain.user.exception.UserAlreadyExistException;
+import com.example.comit.domain.user.exception.UserNotFoundException;
+import com.example.comit.global.error.ErrorResponse;
+import com.example.comit.global.error.exception.TokenExpirationException;
+import com.example.comit.global.error.exception.TokenNotValidException;
+import com.example.comit.global.error.exception.UnknownException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;

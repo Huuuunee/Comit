@@ -1,6 +1,5 @@
-package com.example.comit.domain.auth.presentation.dto.request;
+package com.example.comit.domain.user.presentation.dto.request;
 
-import com.example.comit.domain.auth.presentation.dto.response.SignInResponse;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

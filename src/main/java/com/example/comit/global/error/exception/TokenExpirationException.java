@@ -1,6 +1,6 @@
-package com.example.comit.global.exception.exceptionCollection;
+package com.example.comit.global.error.exception;
 
-import com.example.comit.global.exception.ErrorCode;
+import com.example.comit.global.error.ErrorCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 

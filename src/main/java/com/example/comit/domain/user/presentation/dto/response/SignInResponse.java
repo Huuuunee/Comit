@@ -1,4 +1,4 @@
-package com.example.comit.domain.auth.presentation.dto.response;
+package com.example.comit.domain.user.presentation.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.*;

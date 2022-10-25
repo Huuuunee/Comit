@@ -1,4 +1,4 @@
-package com.example.comit.global.exception;
+package com.example.comit.global.error;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

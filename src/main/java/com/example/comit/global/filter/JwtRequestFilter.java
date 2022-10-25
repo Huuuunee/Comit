@@ -1,6 +1,6 @@
 package com.example.comit.global.filter;
 
-import com.example.comit.global.exception.exceptionCollection.TokenNotValidException;
+import com.example.comit.global.error.exception.TokenNotValidException;
 import com.example.comit.global.security.jwt.TokenProvider;
 import com.example.comit.global.security.jwt.properties.JwtProperties;
 import lombok.RequiredArgsConstructor;
