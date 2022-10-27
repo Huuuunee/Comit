@@ -4,6 +4,7 @@ import com.example.comit.domain.user.exception.UserNotFoundException;
 import com.example.comit.domain.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import com.example.comit.domain.user.domain.entity.*;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
