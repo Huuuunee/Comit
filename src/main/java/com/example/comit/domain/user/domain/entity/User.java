@@ -1,6 +1,6 @@
 package com.example.comit.domain.user.domain.entity;
 
-import com.example.comit.domain.posting.domain.entity.Posting;
+import com.example.comit.domain.post.domain.entity.Posting;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
